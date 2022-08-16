@@ -10,7 +10,7 @@ function App() {
         <div className="App">
             <BrowserRouter>
                 <Routes>
-                    <Route path={"/*"} element={
+                    <Route path={"*"} element={
                         <AuthRoute loading={loading} setLoading={setLoading}>
                             <HomePage/>
                         </AuthRoute>

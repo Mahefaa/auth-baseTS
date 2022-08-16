@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0570db01-48f9-4ad3-8abb-8453bcf680d9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/AuthRoute.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/AuthRoute.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/HomePage/HomePage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/HomePage/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login/index.modules.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/index.modules.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
