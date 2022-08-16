@@ -11,12 +11,12 @@ function App() {
             <BrowserRouter>
                 <Routes>
                     <Route path={"/*"} element={
-                        <AuthRoute setLoading={setLoading}>
+                        <AuthRoute loading={loading} setLoading={setLoading}>
                             <HomePage/>
                         </AuthRoute>
                     }/>
                     <Route path={"/login"} element={
-                        <Redirect setLoading={setLoading}>
+                        <Redirect loading={loading} setLoading={setLoading}>
                             <Login/>
                         </Redirect>
                     }/>

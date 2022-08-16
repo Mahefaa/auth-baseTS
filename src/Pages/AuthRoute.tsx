@@ -2,7 +2,11 @@ import {onAuthStateChanged} from 'firebase/auth';
 import {useNavigate} from "react-router-dom";
 import React, {Dispatch, SetStateAction, useEffect} from "react";
 import {auth} from "./Login/config";
-const AuthRoute : React.FC<{children:React.ReactNode,setLoading:Dispatch<SetStateAction<boolean>>}> = (props) =>{
+const AuthRoute : React.FC<{
+    children:React.ReactNode,
+    loading:boolean,
+    setLoading:Dispatch<SetStateAction<boolean>>
+}> = (props) =>{
 const navigate = useNavigate();
 useEffect(()=>{
         const authCheck=onAuthStateChanged(auth, (user) => {
@@ -14,7 +18,10 @@ useEffect(()=>{
 })
     return <>{props.children}</>
 }
-export const Redirect :React.FC<{children:React.ReactNode,setLoading:Dispatch<SetStateAction<boolean>>}> = (props) =>{
+export const Redirect :React.FC<{
+    children:React.ReactNode,
+    loading:boolean,
+    setLoading:Dispatch<SetStateAction<boolean>>}> = (props) =>{
     const navigate = useNavigate();
     useEffect(()=> {
         const authCheck=onAuthStateChanged(auth, (user) => {
