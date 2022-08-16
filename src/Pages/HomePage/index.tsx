@@ -1,7 +1,9 @@
-import {signOut,getAuth} from "firebase/auth";
+import {signOut} from "firebase/auth";
+import React from "react";
+import './index.modules.css';
+import {auth} from "../Login/config";
 
-const HomePage : React.FC<{app:any}> = (props) =>{
-    const auth = getAuth();
+const HomePage : React.FC<{}> = (props) =>{
     return (
         <div>
             <p>welcome</p>

@@ -7,8 +7,12 @@
     flex-direction: column;
     background: linear-gradient(#ad5389,#3c1053);
 }
+.login__card input{
+    width: 100%;
+}
 #login__username, #login__password{
     background: transparent;
+    align-self: center;
 }
 .login__input label{
     position: absolute;
@@ -20,7 +24,7 @@
     border: 2px solid transparent;
     border-radius: 10%;
     background: transparent;
-    box-shadow: 10px 10px 10px 5px;
+    box-shadow: 10px 10px 10px 5px black;
 }
 .login__form span{
     padding: 10px;
@@ -35,7 +39,6 @@
     position: relative;
 }
 .login__button{
-    width: 100%;
     padding: 10px;
     color: black;
     position:center;

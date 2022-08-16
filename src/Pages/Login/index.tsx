@@ -1,9 +1,9 @@
 import React, {Dispatch, SetStateAction, useState} from "react";
 import './index.modules.css';
-import {getAuth,GoogleAuthProvider,FacebookAuthProvider,GithubAuthProvider,signInWithPopup,signInWithEmailAndPassword} from 'firebase/auth';
+import {GoogleAuthProvider,FacebookAuthProvider,GithubAuthProvider,signInWithPopup,signInWithEmailAndPassword} from 'firebase/auth';
 import {useNavigate} from "react-router-dom";
+import {auth} from "./config";
 const Login : React.FC<{}>=(props)=>{
-    const auth = getAuth();
     const navigate = useNavigate();
     const signIn = async(authProvider:any)=>{
         signInWithPopup(auth,authProvider).then((response)=>{
@@ -51,6 +51,7 @@ const Login : React.FC<{}>=(props)=>{
                     <i onClick={()=>signIn(new GoogleAuthProvider())}>Google</i>
                     <i onClick={()=>signIn(new FacebookAuthProvider())}>Facebook</i>
                     <i onClick={()=>signIn(new GithubAuthProvider())}>Github</i>
+                    <code>{}</code>
                 </span>
             </form>
         </div>

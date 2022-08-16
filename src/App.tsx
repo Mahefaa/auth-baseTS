@@ -1,29 +1,29 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Login from "./Pages/Login";
-import {initializeApp} from "firebase/app";
-import {config} from "./Pages/Login/config";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import HomePage from "./Pages/HomePage/HomePage";
-import AuthRoute from "./Pages/AuthRoute";
-const app = initializeApp(config.firebaseConfig);
+import AuthRoute, {Redirect} from "./Pages/AuthRoute";
+import HomePage from "./Pages/HomePage";
 function App() {
-  return (
-    <div className="App">
-        <BrowserRouter>
-            <Routes>
-                <Route path={"/"} element={
-                    <AuthRoute>
-                        <HomePage app={app}/>
-                    </AuthRoute>
-                }/>
-                <Route path={"/login"} element={
-                    <Login/>
-                }/>
-            </Routes>
-        </BrowserRouter>
-    </div>
-  );
+    const [loading,setLoading] = useState<boolean>(false);
+    return (
+        <div className="App">
+            <BrowserRouter>
+                <Routes>
+                    <Route path={"/*"} element={
+                        <AuthRoute setLoading={setLoading}>
+                            <HomePage/>
+                        </AuthRoute>
+                    }/>
+                    <Route path={"/login"} element={
+                        <Redirect setLoading={setLoading}>
+                            <Login/>
+                        </Redirect>
+                    }/>
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
 export default App;
