@@ -5,10 +5,13 @@ import {auth} from "../Login/config";
 
 const HomePage : React.FC<{}> = (props) =>{
     return (
-        <div>
-            <p>welcome</p>
-            <input type={"button"} onClick={()=>signOut(auth)} value={"log out"}/>
-        </div>
+        <header>
+            <span></span>
+            <span className={"userInfo"}>
+                <p>{`welcome ${window.localStorage.getItem("mail") || window.localStorage.getItem("uid")}`}</p>
+                <input type={"button"} onClick={()=>signOut(auth)} value={"log out"}/>
+            </span>
+        </header>
     )
 }
 export default HomePage;

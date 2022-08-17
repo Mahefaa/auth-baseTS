@@ -13,3 +13,7 @@ const config = {
 };
 const app:FirebaseApp = initializeApp(config.firebaseConfig);
 export const auth = getAuth(app);
+export const save:()=>void = ()=>{
+    window.localStorage.setItem("uid",auth.currentUser?.uid||"");
+    window.localStorage.setItem("mail",auth.currentUser?.email||"");
+}

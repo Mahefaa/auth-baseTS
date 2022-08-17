@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0570db01-48f9-4ad3-8abb-8453bcf680d9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/netlify.toml" beforeDir="false" afterPath="$PROJECT_DIR$/netlify.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/HomePage/index.modules.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/HomePage/index.modules.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/HomePage/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/HomePage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Login/config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +74,8 @@
       <workItem from="1660583778234" duration="5934000" />
       <workItem from="1660623524491" duration="2688000" />
       <workItem from="1660639737686" duration="5819000" />
-      <workItem from="1660677707934" duration="7000" />
+      <workItem from="1660677707934" duration="149000" />
+      <workItem from="1660729824583" duration="4937000" />
     </task>
     <servers />
   </component>
