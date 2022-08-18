@@ -8,17 +8,6 @@
     background: linear-gradient(#ad5389,#3c1053);
     position: relative;
 }
-.login__card input{
-    width: 100%;
-}
-#login__username, #login__password,#login__password__confirm{
-    background: transparent;
-    align-self: center;
-}
-.login__input label{
-    position: absolute;
-    top: -10px;
-}
 .login__form{
     display: grid;
     margin-top:5%;
@@ -27,21 +16,10 @@
     background: transparent;
     box-shadow: 10px 10px 10px 5px black;
 }
-.login__form span{
-    padding: 10px;
-    margin: 15px;
-}
-.login__form .login__input, #login__password, #login__username,#login__password__confirm{
+.login__form{
     border-color: transparent transparent white;
     background: transparent;
     color: whitesmoke;
-}
-.login__form span{
-    position: relative;
-}
-.login__button{
-    padding: 10px;
-    color: black;
 }
 .icons{
     display: flex;
@@ -51,7 +29,19 @@
     margin: 10px;
 }
 .icons *:hover{
-    border-bottom: 2px solid greenyellow;
+    border-bottom: 2px solid;
+}
+.icons .blue:hover{
+    border-color: blue;
+    color: blue;
+}
+.red:hover{
+    border-color: red;
+    color: red;
+}
+.black:hover{
+    border-color: black;
+    color: black;
 }
 i[aria-disabled=true]{
     pointer-events: none;

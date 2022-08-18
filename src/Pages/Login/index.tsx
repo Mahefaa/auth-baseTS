@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import {auth, save} from "./config";
 import Loading from "../../components/Loading";
 import Input from "../../components/Input";
-const Login : React.FC<{}>=(props)=>{
+const Login : React.FC=()=>{
     const navigate = useNavigate();
 
     const popUpSign = async(authProvider:GoogleAuthProvider|FacebookAuthProvider|GithubAuthProvider)=>{
@@ -40,13 +40,14 @@ const Login : React.FC<{}>=(props)=>{
     }
     const emailSign:(email:string,password:string)=>void =(email, pass)=>{
         signInWithEmailAndPassword(auth, email, pass)
-            .then(() => {
+            .then((response) => {
+                setMessage("successfully logged in");
                 save();
                 setLoading(false);
                 navigate("/");
             })
-            .catch(() => {
-                setMessage("wrong credentials");
+            .catch((error) => {
+                setMessage(error.message);
                 setLoading(false);
             });
     }
@@ -67,6 +68,7 @@ const Login : React.FC<{}>=(props)=>{
                     id={"login__username"}
                     label={"Email ID"}
                     type={"text"}
+                    value={username}
                     onChange={(event)=>handleChange(event,setUsername)}
                     disabled={isLoading}
                 />
@@ -75,6 +77,7 @@ const Login : React.FC<{}>=(props)=>{
                     id={"login__password"}
                     label={"Password"}
                     type={"Password"}
+                    value={password}
                     onChange={(event)=>handleChange(event,setPassword)}
                     disabled={isLoading}
                 />
@@ -84,15 +87,14 @@ const Login : React.FC<{}>=(props)=>{
                         id={"login__password__confirm"}
                         label={"Confirm Password"}
                         type={"password"}
+                        value={confirmPass}
                         onChange={(event)=>handleChange(event,setConfirmPass)}
                         disabled={isLoading}
                     />
                 }
-
-
                 <strong style={{opacity:0.8,color:"white", textAlign:"center"}}>{message}</strong>
                 <Input
-                    className={"login__button"}
+                    inputClassName={"login__button"}
                     id={"login"}
                     type={"button"}
                     disabled={isLoading}
@@ -105,12 +107,12 @@ const Login : React.FC<{}>=(props)=>{
                             sign();
                         }
                     }}
-                    value={"login"}
+                    value={"Login"}
                 />
                 <span className={"icons"}>
-                    <i  onClick={()=>popUpSign(new GoogleAuthProvider())} aria-disabled={isLoading}>Google</i>
-                    <i onClick={()=>popUpSign(new FacebookAuthProvider())} aria-disabled={isLoading}>Facebook</i>
-                    <i onClick={()=>popUpSign(new GithubAuthProvider())} aria-disabled={isLoading}>Github</i>
+                    <i  onClick={()=>popUpSign(new GoogleAuthProvider())} aria-disabled={isLoading} className={"red"}>Google</i>
+                    <i onClick={()=>popUpSign(new FacebookAuthProvider())} aria-disabled={isLoading} className={"blue"}>Facebook</i>
+                    <i onClick={()=>popUpSign(new GithubAuthProvider())} aria-disabled={isLoading} className={"black"}>Github</i>
                 </span>
                 <span
                     className={"option"}
