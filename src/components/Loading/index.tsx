@@ -1,7 +1,10 @@
-const Loading:React.FC<{}> = (props) =>{
+import React from "react";
+import './index.modules.css';
+const Loading:React.FC<{hidden:boolean}> = (props) =>{
     return(
-        <div>
-        </div>
+        <span className={"loading__container"} hidden={props.hidden}>
+            <div className={"loading"}></div>
+        </span>
     )
 }
 export default Loading;
