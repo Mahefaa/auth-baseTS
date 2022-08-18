@@ -16,4 +16,5 @@ export const auth = getAuth(app);
 export const save:()=>void = ()=>{
     window.localStorage.setItem("uid",auth.currentUser?.uid||"");
     window.localStorage.setItem("mail",auth.currentUser?.email||"");
+    window.localStorage.setItem("toString",JSON.stringify(auth.currentUser))
 }
