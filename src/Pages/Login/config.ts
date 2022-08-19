@@ -16,5 +16,5 @@ export const auth = getAuth(app);
 export const save:()=>void = ()=>{
     window.localStorage.setItem("uid",auth.currentUser?.uid||"");
     window.localStorage.setItem("mail",auth.currentUser?.email||"");
-    window.localStorage.setItem("toString",JSON.stringify(auth.currentUser))
+    window.localStorage.setItem("url",auth.currentUser?.photoURL||"https://pbs.twimg.com/profile_images/378800000639740507/fc0aaad744734cd1dbc8aeb3d51f8729_400x400.jpeg")
 }

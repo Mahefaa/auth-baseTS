@@ -1,35 +1,79 @@
 .body{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: linear-gradient(#ad5389,#3c1053);
-    display: grid;
     overflow-y: hidden;
-}
-header{
-    display: flex;
-    flex-direction: row;
-    width: 99.8vw;
-    height: 100px;
-}
-header .menu{
-    display: flex;
-    flex-wrap: wrap;
-}
-header .menu *{
-    margin: 10px;
-}
-header .menu .logout__btn{
-    background: red;
-    color: white;
-    width: fit-content;
-    height: fit-content;
+    flex-direction: column;
 }
 .container{
-    justify-self: center;
-    border: 2px solid black;
-    height: 80vh;
-    width: 70vw;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 25%;
+}
+.container__text{
+    color: white;
+    z-index: 999;
+}
+.project__links{
+    display: flex;
+    gap: 10%;
+}
+.container__body{
+    position: absolute;
+    height: 50%;
+    width: 50%;
     min-width: 350px;
+    min-height: 350px;
+    max-height: 750px;
+    max-width: 750px;
     background: white;
     opacity: 30%;
 }
+.navigation {
+    width: 100%;
+    background-color: black;
+}
+
+img {
+    width: 25px;
+    border-radius: 50px;
+    float: left;
+}
+
+.logout {
+    font-size: .8em;
+    font-family: sans-serif;
+    position: relative;
+    right: -18px;
+    bottom: -4px;
+    overflow: hidden;
+    letter-spacing: 3px;
+    opacity: 0;
+    transition: opacity .45s;
+    -webkit-transition: opacity .35s;
+
+}
+
+.menu {
+    text-decoration: none;
+    float: right;
+    padding: 12px;
+    margin: 15px;
+    color: white;
+    width: 25px;
+    background-color: black;
+    transition: width .35s;
+    -webkit-transition: width .35s;
+    overflow: hidden
+}
+
+.menu:hover {
+    width: max-content;
+}
+
+.menu:hover .logout{
+    opacity: .9;
+}
+
+
+
