@@ -3,11 +3,10 @@ import React from "react";
 import './index.modules.css';
 import {auth} from "../Login/config";
 
-const HomePage : React.FC<{}> = (props) =>{
+const HomePage : React.FC = () =>{
     return (
         <div className={"body"}>
-            <div className="navigation">
-
+            <header className="navigation">
                 <p className="menu">
                     <img
                         src={window.localStorage.getItem("url")||"defaultUrlAlreadyInItem"} alt={"profile pic"}/>
@@ -19,22 +18,20 @@ const HomePage : React.FC<{}> = (props) =>{
                                     {` ${window.localStorage.getItem("mail") || window.localStorage.getItem("uid")}`}
                                 </b>
                             </p>
-                            <p onClick={()=>signOut(auth)}>Log out</p>
+                            <input type={"button"} onClick={()=>signOut(auth)} value={"log out"} className={"logout__btn"}/>
                         </div>
 
                 </p>
-
-            </div>
+            </header>
             <div className={"container"}>
                 <div className={"container__body"}></div>
                 <div className={"container__text"}>
-                    <h1>Final Examination</h1>
-                    <p>Here's a little evolution catchup</p>
-                    <span className={"project__links"}>
-                        <a href={"https://kanban-typescript.herokuapp.com/"} target={"_blank"} rel={"noreferrer"}>kanban</a>
-                        <a href={"https://typescript-rekognition.netlify.app/"} target={"_blank"} rel={"noreferrer"}>rekognition</a>
-                        <a href={"https://auth-base.netlify.app/"} target={"_blank"} rel={"noreferrer"}>firebase</a>
-                    </span>
+                    <p>
+                        Successfully Connected Mister
+                            <strong className={"important"}>{` ${window.localStorage.getItem("mail")} `}</strong>
+                        here's your Unique ID:
+                        <strong className={"important"}>{`${window.localStorage.getItem("uid")}`}</strong>
+                    </p>
                 </div>
             </div>
 
