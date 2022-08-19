@@ -29,8 +29,11 @@ const HomePage : React.FC = () =>{
                     <p>
                         Successfully Connected Mister
                             <strong className={"important"}>{` ${window.localStorage.getItem("mail")} `}</strong>
-                        here's your Unique ID:
-                        <strong className={"important"}>{`${window.localStorage.getItem("uid")}`}</strong>
+                        <hr/>
+                        <p>
+                            here's your Unique ID:
+                            <strong className={"important"}>{`${window.localStorage.getItem("uid")}`}</strong>
+                        </p>
                     </p>
                 </div>
             </div>

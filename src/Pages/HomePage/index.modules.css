@@ -30,13 +30,10 @@
             blink-caret .75s step-end 20s;
 }
 
-/* The typing effect */
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
 }
-
-/* The typewriter cursor effect */
 @keyframes blink-caret {
     from, to { border-color: transparent }
     50% { border-color: orange; }
@@ -105,6 +102,14 @@ img {
     }
     to{
         background-color: red;
+    }
+}
+@keyframes disappear{
+    from{
+        opacity: 100%;
+    }
+    to{
+        opacity: 100%;
     }
 }
 
